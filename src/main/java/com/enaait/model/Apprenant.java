@@ -13,14 +13,6 @@ public class Apprenant {
     private String prenom;
     private String email;
 
-    @ManyToMany
-    @JoinTable(
-        name = "apprenant_competence",
-        joinColumns = @JoinColumn(name = "apprenant_id"),
-        inverseJoinColumns = @JoinColumn(name = "competence_id")
-    )
-    private List<Competence> competences;
-
     public Apprenant() {}
 
     // Getters et setters
@@ -32,6 +24,5 @@ public class Apprenant {
     public void setPrenom(String prenom) { this.prenom = prenom; }
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
-    public List<Competence> getCompetences() { return competences; }
-    public void setCompetences(List<Competence> competences) { this.competences = competences; }
+
 } 

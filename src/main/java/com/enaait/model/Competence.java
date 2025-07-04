@@ -12,8 +12,6 @@ public class Competence {
     private String nom;
     private String description;
 
-    @OneToMany(mappedBy = "competence", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<SousCompetence> sousCompetences;
 
     public Competence() {}
 
@@ -24,6 +22,5 @@ public class Competence {
     public void setNom(String nom) { this.nom = nom; }
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
-    public List<SousCompetence> getSousCompetences() { return sousCompetences; }
-    public void setSousCompetences(List<SousCompetence> sousCompetences) { this.sousCompetences = sousCompetences; }
+
 } 

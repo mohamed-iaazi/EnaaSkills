@@ -29,7 +29,7 @@ public class CompetenceService {
     }
 
     public Competence updateCompetence(Long id, Competence updated) {
-
+   return  null;
     }
 
     public void deleteCompetence(Long id) {
@@ -37,6 +37,6 @@ public class CompetenceService {
     }
 
     public boolean isCompetenceAcquired(Competence competence) {
-
+ return  true;
     }
 } 
