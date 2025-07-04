@@ -9,60 +9,42 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/api/competences")
-@Tag(name = "Competences" , description = "Gestion des compétences et sous-compétences")
+@Tag(name = "Gestion des Compétences", description = "API pour gérer les compétences et sous-compétences des apprenants")
 public class CompetenceController {
-    private final CompetenceService competenceService;
 
+    private final CompetenceService competenceService;
     public CompetenceController(CompetenceService competenceService) {
         this.competenceService = competenceService;
     }
 
-
-
-    @Operation(summary = "access a touts les competences  ")
-    @GetMapping
-    public List<Competence> getAllCompetences() {
-
-
-        return  null;
-    }
-
-
-
-    @Operation(summary = "access a une competence avec id ")
-    @GetMapping("/{id}")
-    public ResponseEntity<Competence> getCompetenceById(@PathVariable Long id) {
-  return null;
-    }
-
-
-
-    @Operation(summary = "ajouter nouveau competence")
+    @Operation(summary = "Créer ou mettre à jour une compétence avec ses sous-compétences")
     @PostMapping
-    public Competence createCompetence(@RequestBody Competence competence) {
-        return competenceService.createCompetence(competence);
+    public ResponseEntity<Competence> saveCompetence(@RequestBody Competence competence) {
+        Competence saved = competenceService.saveCompetence(competence);
+        return ResponseEntity.ok(saved);
     }
 
-    @Operation(summary = "modifier un competence avec une id")
-    @PutMapping("/{id}")
-    public ResponseEntity<Competence> updateCompetence(@PathVariable Long id, @RequestBody Competence competence) {
- return  null;
+    @Operation(summary = "Valider ou invalider une sous-compétence")
+    @PutMapping("/souscompetences/{id}/valider")
+    public ResponseEntity<Void> validerSousCompetence(@PathVariable Long id, @RequestParam boolean valide) {
+        competenceService.validerSousCompetence(id, valide);
+        return ResponseEntity.ok().build();
     }
 
-
-
-    @Operation
+    @Operation(summary = "Supprimer une compétence par son ID")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCompetence(@PathVariable Long id) {
-
-        return null;
+        competenceService.deleteCompetence(id);
+        return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/{id}/acquired")
-    public ResponseEntity<Boolean> isCompetenceAcquired(@PathVariable Long id) {
-
-        return null;
+    @Operation(summary = "Lister toutes les compétences")
+    @GetMapping
+    public ResponseEntity<List<Competence>> getAllCompetences() {
+        List<Competence> competences = competenceService.getAllCompetences();
+        return ResponseEntity.ok(competences);
     }
-} 
+}
