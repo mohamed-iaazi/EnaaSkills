@@ -41,9 +41,9 @@ public class BriefService {
 
     }
 
-    public ResponseEntity<Brief> deleteBrief(Brief brief) {
-        repository.delete(brief);
-        return ResponseEntity.ok().body(brief);
+    public ResponseEntity<Boolean> deleteBrief(Long id) {
+        repository.deleteById(id);
+        return ResponseEntity.ok().body(true);
     }
 
 
