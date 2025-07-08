@@ -17,7 +17,7 @@ public class SousCompetence {
     private Long id;
     private String nom;
     private String description;
-    private boolean valide;
+    private boolean Valide;
     @ManyToOne
     private Competence competence;
 

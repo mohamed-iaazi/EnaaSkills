@@ -1,0 +1,10 @@
+com\enaait\repository\SousCompetenceRepository.class
+com\enaait\config\SwaggerConfig.class
+com\enaait\GestionCompetencesApplication.class
+com\enaait\repository\CompetenceRepository.class
+com\enaait\service\CompetenceService.class
+com\enaait\model\Competence.class
+com\enaait\model\Apprenant.class
+com\enaait\controller\CompetenceController.class
+com\enaait\repository\ApprenantRepository.class
+com\enaait\model\SousCompetence.class

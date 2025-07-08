@@ -5,13 +5,12 @@ import com.enaait.model.SousCompetence;
 import com.enaait.repository.CompetenceRepository;
 import com.enaait.repository.SousCompetenceRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CompetenceService {
+
     private final CompetenceRepository competenceRepository;
     private final SousCompetenceRepository sousCompetenceRepository;
 
@@ -21,45 +20,26 @@ public class CompetenceService {
         this.sousCompetenceRepository = sousCompetenceRepository;
     }
 
-    // Créer ou mettre à jour une compétence (avec ses sous-compétences)
+    // Save or update a competence (with its sous-competences)
     public Competence saveCompetence(Competence competence) {
-        for (SousCompetence sc : competence.getSousCompetences()) {
-            sc.setCompetence(competence);
-        }
-        competence.setValide(isCompetenceValide(competence));
         return competenceRepository.save(competence);
     }
 
-    // Modifier le statut d'une sous-compétence et mettre à jour la compétence parente
+    // Validate or invalidate a sous-competence by ID
     public void validerSousCompetence(Long sousCompId, boolean valide) {
-        SousCompetence sc = sousCompetenceRepository.findById(sousCompId).orElse(null);
-        if (sc != null) {
+        sousCompetenceRepository.findById(sousCompId).ifPresent(sc -> {
             sc.setValide(valide);
             sousCompetenceRepository.save(sc);
-
-            Competence competence = sc.getCompetence();
-            competence.setValide(isCompetenceValide(competence));
-            competenceRepository.save(competence);
-        }
+        });
     }
 
-    // Calcul simple : compétence validée si toutes les sous-compétences le sont
-    private boolean isCompetenceValide(Competence competence) {
-        for (SousCompetence sc : competence.getSousCompetences()) {
-            if (!sc.isValide()) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    // Supprimer une compétence
+    // Delete competence by ID
     public void deleteCompetence(Long competenceId) {
         competenceRepository.deleteById(competenceId);
     }
 
-    // Récupérer toutes les compétences
+    // Get all competences
     public List<Competence> getAllCompetences() {
         return competenceRepository.findAll();
     }
-} 
+}
