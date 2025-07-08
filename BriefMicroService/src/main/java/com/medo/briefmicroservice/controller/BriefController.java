@@ -24,7 +24,9 @@ public class BriefController {
 
     @PostMapping("/create")
     public ResponseEntity<Brief> createNewBrief(@RequestBody Brief brief) {
-        return ResponseEntity.ok().body(briefService.createNewBrief(brief));
+        return ResponseEntity.ok().body(briefService.createNewBrief(brief).getBody());
 
     }
+
+
 }
