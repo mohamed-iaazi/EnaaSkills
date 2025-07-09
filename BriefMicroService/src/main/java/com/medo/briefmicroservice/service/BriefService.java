@@ -42,8 +42,13 @@ public class BriefService {
     }
 
     public ResponseEntity<Boolean> deleteBrief(Long id) {
-        repository.deleteById(id);
-        return ResponseEntity.ok().body(true);
+        if (repository.existsById(id)) {
+
+            repository.deleteById(id);
+            return ResponseEntity.ok().body(true);
+        }
+        return ResponseEntity.badRequest().body(false);
+
     }
 
 
