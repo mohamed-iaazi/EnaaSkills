@@ -24,14 +24,12 @@ public class CompetenceController  {
 
 
     @GetMapping("/afficher")
-
     public List<Competence> findAllCompetences() {
         return competenceservice.findAllCompetences();
     }
 
 
     @PostMapping("/ajouter")
-
     public Competence saveCompetence(@RequestBody  Competence competence) {
         return competenceservice.saveCompetence(competence);
     }
