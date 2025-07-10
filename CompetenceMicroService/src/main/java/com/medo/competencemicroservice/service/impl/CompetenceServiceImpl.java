@@ -16,8 +16,8 @@ public class CompetenceServiceImpl implements Competenceservice {
     CompetenceRepository competenceRepository;
 
     @Override
-    public Competence findCompetenceById(String id) {
-        return competenceRepository.findById(id).orElse(null);
+    public Competence findCompetenceById(Long id) {
+        return competenceRepository.findById(String.valueOf(id)).orElse(null);
     }
 
     @Override
@@ -35,10 +35,12 @@ public class CompetenceServiceImpl implements Competenceservice {
         return competenceRepository.save(competence);
     }
 
-    @Override
-    public void deleteCompetence(String id) {
 
-        competenceRepository.deleteById(id);
+
+    @Override
+    public void deleteCompetence(Long id) {
+
+        competenceRepository.deleteById(String.valueOf(id));
 
     }
 }

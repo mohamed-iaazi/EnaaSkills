@@ -8,11 +8,11 @@ import java.util.List;
 
 public interface Competenceservice {
 
-    Competence findCompetenceById(String id);
+    Competence findCompetenceById(Long id);
     List<Competence> findAllCompetences();
     Competence saveCompetence(Competence competence);
     Competence updateCompetence(Competence competence);
-    void deleteCompetence(String id);
+    void deleteCompetence(Long id);
 
 
 
