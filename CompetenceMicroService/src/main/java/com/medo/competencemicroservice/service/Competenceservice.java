@@ -1,10 +1,19 @@
 package com.medo.competencemicroservice.service;
 
 
+import com.medo.competencemicroservice.model.Competence;
 import org.springframework.stereotype.Service;
 
-@Service
-public class Competenceservice {
+import java.util.List;
+
+public interface Competenceservice {
+
+    Competence findCompetenceById(String id);
+    List<Competence> findAllCompetences();
+    Competence saveCompetence(Competence competence);
+    Competence updateCompetence(Competence competence);
+    void deleteCompetence(String id);
+
 
 
 }
