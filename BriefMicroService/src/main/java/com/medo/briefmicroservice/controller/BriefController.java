@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/brief")
+
 public class BriefController {
 
     BriefService briefService;
