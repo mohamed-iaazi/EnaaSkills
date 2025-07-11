@@ -1,8 +1,6 @@
 package com.medo.briefmicroservice.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +18,13 @@ public class BriefCompetances {
     @Id
     @GeneratedValue
     private long id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "brief_id", nullable = false)
+    private Brief brief;
+
+    @Column(name = "competence_id", nullable = false)
+    private Long competenceId;
+
 
 
 }

@@ -1,6 +1,7 @@
 package com.medo.briefmicroservice.controller;
 
 
+import com.medo.briefmicroservice.dto.Competence;
 import com.medo.briefmicroservice.model.Brief;
 import com.medo.briefmicroservice.service.BriefService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/brief")
+
 public class BriefController {
 
-    BriefService briefService;
+   private  BriefService briefService;
+
 
     @Autowired
     public void setBriefService(BriefService briefService) {
@@ -42,5 +45,14 @@ public class BriefController {
         return ResponseEntity.ok(briefService.getAllBriefs().getBody());
     }
 
+    @PostMapping("/associate/{briefId}/{competenceId}")
+    public ResponseEntity<Void> competence(@PathVariable Long briefId, @PathVariable Long competenceId) {
+        return  briefService.associateCompetence(briefId, competenceId) ;
+    }
+//
+//    @GetMapping
+//    public ResponseEntity<List<Competence>> getAllCompetencesAssosiate() {
+//
+//    }
 
 }

@@ -2,17 +2,32 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gestion-competences" />
-        <module name="apigeteway" />
+      </profile>
+      <profile name="Annotation profile for CompetenceMicroService" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath>
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="BriefMicroService" />
+        <module name="CompetenceMicroService" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="apigeteway" target="17" />
+      <module name="gestion-competences" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BriefMicroService" options="-parameters" />
+      <module name="CompetenceMicroService" options="-parameters" />
       <module name="apigeteway" options="-parameters" />
       <module name="gestion-competences" options="-parameters" />
     </option>

@@ -1,4 +1,4 @@
-package com.medo.briefmicroservice.model;
+package com.medo.competencemicroservice.model;
 
 
 import jakarta.persistence.Entity;
@@ -15,10 +15,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Brief {
+public class Competence {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private  Long id;
-    private  String title;
-    private  String description;
+    private Long id;
+    private String name;
+
 }
