@@ -4,7 +4,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Enaaskils/pom.xml" />
+        <option value="$PROJECT_DIR$/Api-Getway/pom.xml" />
+        <option value="$PROJECT_DIR$/Auth-MicroService/pom.xml" />
         <option value="$PROJECT_DIR$/BriefMicroService/pom.xml" />
         <option value="$PROJECT_DIR$/CompetenceMicroService/pom.xml" />
       </list>
