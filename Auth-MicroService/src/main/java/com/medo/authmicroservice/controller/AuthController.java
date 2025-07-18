@@ -2,6 +2,12 @@ package com.medo.authmicroservice.controller;
 
 
 
+import com.medo.authmicroservice.dto.AuthRequest;
+import com.medo.authmicroservice.dto.AuthResponse;
+import com.medo.authmicroservice.dto.CreateUserDTO;
+import com.medo.authmicroservice.service.AuthService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +34,7 @@ public class AuthController {
 
     @Operation(description = "Register api ")
     @PostMapping("/register")
-    public ResponseEntity<AuthResponse> createAccount(@RequestBody  CreateUserDTO createUserDTO) {
+    public ResponseEntity<AuthResponse> createAccount(@RequestBody CreateUserDTO createUserDTO) {
     return authService.createAccount(createUserDTO);
     }
 

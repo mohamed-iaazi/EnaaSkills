@@ -1,12 +1,12 @@
-package com.medo.backend.auth.service.impl;
+package com.medo.authmicroservice.service.impl;
 
-import com.medo.backend.auth.dto.AuthRequest;
-import com.medo.backend.auth.dto.AuthResponse;
-import com.medo.backend.auth.dto.CreateUserDTO;
-import com.medo.backend.auth.repository.AuthRepository;
-import com.medo.backend.auth.security.JwtService;
-import com.medo.backend.auth.service.AuthService;
-import com.medo.backend.user.model.User;
+import com.medo.authmicroservice.dto.AuthRequest;
+import com.medo.authmicroservice.dto.AuthResponse;
+import com.medo.authmicroservice.dto.CreateUserDTO;
+import com.medo.authmicroservice.model.User;
+import com.medo.authmicroservice.repository.AuthRepository;
+import com.medo.authmicroservice.security.JwtService;
+import com.medo.authmicroservice.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -34,17 +34,13 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public ResponseEntity<AuthResponse> createAccount(CreateUserDTO request) {
-        if (authRepository.existsByName(request.getName()) || authRepository.existsByEmail(request.getEmail())) {
+        if (authRepository.existsByUsername(request.getUsername()) || authRepository.existsByEmail(request.getEmail())) {
             return ResponseEntity.badRequest().body(new AuthResponse("user already exist ", null, null));
         }
 
         User user = new User();
-        user.setName(request.getName());
-        user.setEmail(request.getEmail());
+        user.setUsername(request.getUsername());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setBio(request.getBio());
-        user.setCompetences(request.getCompetences());
-        user.setAvatarUrl(request.getAvatarUrl());
 
         authRepository.save(user);
 
@@ -52,7 +48,7 @@ public class AuthServiceImpl implements AuthService {
 
         return ResponseEntity.ok(AuthResponse.builder()
                 .token(jwt)
-                .username(request.getName())
+                .username(request.getUsername())
                 .message("Created account successfully")
                 .build()
         );
@@ -71,7 +67,7 @@ public class AuthServiceImpl implements AuthService {
 
         return ResponseEntity.ok(AuthResponse.builder()
                 .token(jwt)
-                .username(user.getName())
+                .username(user.getUsername())
                 .message("login successfully")
                 .build());
     }

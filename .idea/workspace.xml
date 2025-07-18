@@ -4,17 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49b4231f-1a48-4480-99ed-faf0141b29fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/repository/CompetenceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="1e06b454-1357-468b-a398-566a225bccf3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/dto/AuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/dto/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/dto/CreateUserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/repository/AuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/security/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/security/UserDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-MicroService/src/main/java/com/medo/authmicroservice/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1911c654-58a5-4091-82f8-dbff20c62ba4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1911c654-58a5-4091-82f8-dbff20c62ba4/storage_v2/_src_/schema/competences.ymF6vg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1911c654-58a5-4091-82f8-dbff20c62ba4/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1911c654-58a5-4091-82f8-dbff20c62ba4/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1911c654-58a5-4091-82f8-dbff20c62ba4/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1911c654-58a5-4091-82f8-dbff20c62ba4/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/client/CompetenceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/client/CompetenceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/controller/BriefController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/controller/BriefController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/controller/CompetenceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/model/Brief.java" beforeDir="false" afterPath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/model/Brief.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/model/BriefCompetances.java" beforeDir="false" afterPath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/model/BriefCompetances.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/service/BriefService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/service/BriefService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/service/CompetenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BriefMicroService/src/main/java/com/medo/briefmicroservice/service/CompetenceService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +36,6 @@
   </component>
   <component name="ComposerSettings">
     <execution />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Interface" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,62 +52,54 @@
     &quot;accountId&quot;: &quot;1db83641-8a46-46ac-b8f6-dc8980a1413d&quot;
   }
 }</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
 }</component>
-  <component name="ProjectId" id="2zdyykX8Itzzd8JsDgb7mlFxdvR" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2zwwxBz01x42GGsatnrlefPjqvx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BriefMicroServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CompetenceMicroServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GestionCompetencesApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;competance-microservice&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/iaazi/OneDrive/Desktop/EnaaIt/CompetenceMicroService&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/iaazi/OneDrive/Desktop/EnaaIt/Auth-MicroService/src/main/java/com/medo/authmicroservice",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\iaazi\OneDrive\Desktop\EnaaIt\Auth-MicroService\src\main\java\com\medo\authmicroservice" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager" selected="Spring Boot.BriefMicroServiceApplication">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="EnaaIt" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="EnaaIt" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <configuration name="BriefMicroServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="BriefMicroServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="BriefMicroService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.medo.briefmicroservice.BriefMicroServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.medo.briefmicroservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,11 +111,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.BriefMicroServiceApplication" />
-      </list>
-    </recent_temporary>
+    <configuration name="GestionCompetencesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gestion-competences" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.enaait.GestionCompetencesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -131,14 +130,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="49b4231f-1a48-4480-99ed-faf0141b29fc" name="Changes" comment="" />
-      <created>1752075500686</created>
+      <changelist id="1e06b454-1357-468b-a398-566a225bccf3" name="Changes" comment="" />
+      <created>1752655688200</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1752075500686</updated>
-      <workItem from="1752075501887" duration="470000" />
-      <workItem from="1752159716616" duration="3012000" />
-      <workItem from="1752222772740" duration="2909000" />
+      <updated>1752655688200</updated>
+      <workItem from="1752655689596" duration="3417000" />
+      <workItem from="1752764251432" duration="724000" />
     </task>
     <servers />
   </component>

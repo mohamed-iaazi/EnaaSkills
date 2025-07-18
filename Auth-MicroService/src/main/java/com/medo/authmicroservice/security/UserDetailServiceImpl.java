@@ -2,6 +2,7 @@ package com.medo.authmicroservice.security;
 
 
 import com.medo.authmicroservice.model.User;
+import com.medo.authmicroservice.repository.AuthRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,7 +25,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
         User user = authRepository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + email));
 
         return org.springframework.security.core.userdetails.User.builder()
-                .username(user.getEmail())
+                .username(user.getUsername())
                 .password(user.getPassword())
                 .build();
     }
