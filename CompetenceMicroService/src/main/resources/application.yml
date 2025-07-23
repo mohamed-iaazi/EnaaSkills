@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: CompetenceMicroService
+  datasource:
+    url: jdbc:mysql://localhost:3306/competences?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+server:
+  port: 8083
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true 
