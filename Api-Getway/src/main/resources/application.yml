@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: Api-Getway
+  cloud:
+    gateway:
+      routes:
+        - id: Auth-MicroService
+          uri: lb://Auth-MicroService
+          predicates:
+            - Path=/auth-service/**
+        - id: brief-service
+          uri: lb://brief-service
+          predicates:
+            - Path=/brief-service/**
+        - id: CompetenceMicroService
+          uri: lb://CompetenceMicroService
+          predicates:
+            - Path=/competence-service/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+server:
+  port: 9090
