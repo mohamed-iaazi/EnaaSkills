@@ -1,22 +1,25 @@
 spring:
   application:
     name: Api-Getway
+  main:
+    web-application-type: reactive
   cloud:
     gateway:
-      routes:
-        - id: Auth-MicroService
-          uri: lb://Auth-MicroService
-          predicates:
-            - Path=/auth-service/**
-        - id: brief-service
-          uri: lb://brief-service
-          predicates:
-            - Path=/brief-service/**
-        - id: CompetenceMicroService
-          uri: lb://CompetenceMicroService
-          predicates:
-            - Path=/competence-service/**
-
+      server:
+        webflux:
+          routes:
+            - id: Auth-MicroService
+              uri: lb://Auth-MicroService
+              predicates:
+                - Path=/auth-service/**
+            - id: brief-service
+              uri: lb://BRIEFMICROSERVICE
+              predicates:
+                - Path=/brief-service/**
+            - id: CompetenceMicroService
+              uri: lb://CompetenceMicroService
+              predicates:
+                - Path=/competence-service/**
 eureka:
   client:
     service-url:
